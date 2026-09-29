@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #07070a;
+    color: #fff;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    min-height: 100vh;
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Background Glow */
+
+.glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .25;
+    animation: floating 6s ease-in-out infinite;
+}
+
+.glow-1 {
+    background: #7c3aed;
+    top: -100px;
+    left: -100px;
+}
+
+.glow-2 {
+    background: #06b6d4;
+    right: -100px;
+    bottom: -100px;
+    animation-delay: 2s;
+}
+
+
+/* Container */
+
+.about-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    padding: 35px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.04);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+    transition: .4s ease;
+
+    animation: cardFloat 5s ease-in-out infinite;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(124,58,237,.6);
+}
+
+
+/* Profile Circle */
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.image-circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    background:
+        linear-gradient(135deg, #7c3aed, #06b6d4);
+
+    box-shadow:
+        0 0 0 10px rgba(124,58,237,.08),
+        0 0 50px rgba(124,58,237,.4);
+
+    animation: pulse 3s infinite;
+}
+
+
+.profile-card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.role {
+    color: #a1a1aa;
+    font-size: 14px;
+}
+
+
+/* Status */
+
+.status {
+    margin: 20px auto;
+    width: fit-content;
+
+    padding: 9px 15px;
+    border-radius: 30px;
+
+    background: rgba(34,197,94,.08);
+    border: 1px solid rgba(34,197,94,.2);
+
+    color: #a7f3d0;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+
+    box-shadow: 0 0 10px #22c55e;
+}
+
+
+/* Social */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+
+    padding: 8px 12px;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+    background: rgba(255,255,255,.08);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.small-title {
+    color: #a78bfa;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-content h1 {
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.about-content h1 span {
+    background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    max-width: 750px;
+    color: #a1a1aa;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.description strong {
+    color: #fff;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.skill {
+    padding: 10px 16px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.1);
+
+    color: #d4d4d8;
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background: rgba(124,58,237,.15);
+    border-color: #7c3aed;
+    color: #fff;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: flex;
+    gap: 50px;
+    margin: 35px 0;
+}
+
+.stat h2 {
+    font-size: 30px;
+}
+
+.stat p {
+    margin-top: 5px;
+    color: #71717a;
+    font-size: 12px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 22px;
+
+    color: #fff;
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #4f46e5
+    );
+
+    box-shadow: 0 10px 30px rgba(124,58,237,.25);
+
+    transition: .3s;
+}
+
+.btn span {
+    font-size: 20px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(124,58,237,.4);
+}
+
+.btn:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes cardFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .about {
+        padding: 70px 6%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-left {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h1 {
+        letter-spacing: -2px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .btn {
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .profile-card {
+        padding: 25px 15px;
+    }
+
+    .image-circle {
+        width: 130px;
+        height: 130px;
+        font-size: 36px;
+    }
+
+    .about-content h1 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+
+    .stat h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

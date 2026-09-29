@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Web Developer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            darkBg: '#090a16',
+            cardBg: '#111326',
+            accentPurple: '#6366f1',
+            accentViolet: '#8b5cf6',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-darkBg text-slate-300 font-sans antialiased selection:bg-accentPurple selection:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav
+    class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between border-b border-slate-800/60 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
+    <div class="text-xl font-bold text-white tracking-wider flex items-center gap-2">
+      <span class="text-accentPurple">&lt;/&gt;</span> Mern Stack Developer
+    </div>
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+      <li><a href="#home" class="text-white hover:text-accentPurple transition">Home</a></li>
+      <li><a href="#about" class="hover:text-accentPurple transition">About</a></li>
+      <li><a href="#skills" class="hover:text-accentPurple transition">Skills</a></li>
+      <li><a href="#projects" class="hover:text-accentPurple transition">Projects</a></li>
+      <li><a href="#contact" class="hover:text-accentPurple transition">Contact</a></li>
+    </ul>
+    <a href="#contact"
+      class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition shadow-lg shadow-indigo-500/25">
+      Hire Me <i class="fa-solid fa-arrow-right ml-1"></i>
+    </a>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 space-y-28 py-12">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="grid md:grid-cols-2 gap-12 items-center pt-8">
+      <div>
+        <span
+          class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/70 border border-indigo-500/30 rounded-full mb-4">
+          I'm a Mern Stack Developer
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+          Hi, I'm <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">Omprakash</span><br>
+          I build things for the web.
+        </h1>
+        <p class="text-slate-400 mb-8 max-w-lg leading-relaxed text-sm md:text-base">
+          I'm a passionate Mern Stack developer specializing in building modern, interactive, and responsive digital web
+          experiences.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="#projects"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg text-sm transition shadow-lg shadow-indigo-500/30">
+            View My Work <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+          </a>
+          <a href="./Omprakash_Mandrai_Premium_Professional_Resume.pdf"
+            class="border border-slate-700 hover:border-slate-500 hover:bg-slate-800/40 text-slate-300 font-medium px-6 py-3 rounded-lg text-sm transition">
+            Download CV <i class="fa-solid fa-download ml-1 text-xs"></i>
+          </a>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-slate-500 font-semibold mb-3">Technologies I Work With</p>
+          <div class="flex gap-4 text-2xl text-slate-400">
+            <i class="fa-brands fa-html5 hover:text-orange-500 transition"></i>
+            <i class="fa-brands fa-css3-alt hover:text-blue-500 transition"></i>
+            <i class="fa-brands fa-js hover:text-yellow-400 transition"></i>
+            <i class="fa-brands fa-react hover:text-cyan-400 transition"></i>
+            <i class="fa-brands fa-node hover:text-green-500 transition"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual & Code snippet -->
+      <div class="relative flex justify-center items-center">
+        <!-- Glowing Background Circle -->
+        <div
+          class="absolute w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-purple-700/40 to-indigo-600/40 blur-2xl -z-10">
+        </div>
+        <div
+          class="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-indigo-500/30 overflow-hidden shadow-2xl bg-indigo-950/20">
+          <!-- Apni image yahan lagayein -->
+          <img src="./WhatsApp Image 2026-07-25 at 5.46.54 AM (2).jpeg"
+            alt="Profile" class="w-full h-full object-cover">
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ================= ABOUT & STATS ================= -->
+    <section id="about" class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="text-xs uppercase tracking-wider text-indigo-400 font-semibold">About Me</span>
+        <h2 class="text-3xl font-bold text-white mt-1 mb-4 leading-snug">
+
+
+          Hi, I’m Omprakash Mandrai, a passionate MERN Stack Developer who enjoys creating modern, responsive, and
+          user-friendly websites and web applications. I have a strong interest in HTML, CSS, JavaScript, React.js,
+          Node.js, Express.js, and MongoDB. I love learning new technologies, solving problems, and turning ideas into
+          functional digital experiences. I’m continuously improving my development skills and looking forward to
+          building innovative projects and growing as a professional developer.
+
+        </h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          With years of experience in web development, I help businesses and individuals bring their ideas to life
+          through clean, efficient, and user-friendly code.
+        </p>
+        <a href="#contact"
+          class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition">
+          Learn More About Me <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-cardBg border border-slate-800/80 p-5 rounded-xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-900/40 text-indigo-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Fresher</h3>
+            <p class="text-xs text-slate-400"></p>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-5 rounded-xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-900/40 text-indigo-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">10+</h3>
+            <p class="text-xs text-slate-400">Projects Completed</p>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-5 rounded-xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-900/40 text-indigo-400 flex items-center justify-center text-xl">
+            <i class="fa-regular fa-smile"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white"></h3>
+            <p class="text-xs text-slate-400"></p>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-5 rounded-xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-900/40 text-indigo-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">100%</h3>
+            <p class="text-xs text-slate-400">Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="text-center">
+      <span class="text-xs uppercase tracking-wider text-indigo-400 font-semibold">My Skills</span>
+      <h2 class="text-3xl font-bold text-white mt-1 mb-10">Technologies I Master</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <!-- Skill Item -->
+        <div class="bg-cardBg border border-slate-800/80 p-4 rounded-xl">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-white"><i class="fa-brands fa-html5 text-orange-500 mr-2"></i> HTML5</span>
+            <span class="text-indigo-400">95%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-500 h-full rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-4 rounded-xl">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-white"><i class="fa-brands fa-react text-cyan-400 mr-2"></i> React.js</span>
+            <span class="text-indigo-400">85%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-500 h-full rounded-full" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-4 rounded-xl">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-white"><i class="fa-brands fa-node-js text-green-500 mr-2"></i> Node.js</span>
+            <span class="text-indigo-400">80%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-500 h-full rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-4 rounded-xl">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-white"><i class="fa-brands fa-css3-alt text-blue-500 mr-2"></i> Tailwind CSS</span>
+            <span class="text-indigo-400">90%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-500 h-full rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-4 rounded-xl">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-white"><i class="fa-brands fa-js text-yellow-400 mr-2"></i> JavaScript</span>
+            <span class="text-indigo-400">90%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-500 h-full rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="bg-cardBg border border-slate-800/80 p-4 rounded-xl">
+          <div class="flex justify-between text-sm font-semibold mb-2">
+            <span class="text-white"><i class="fa-brands fa-git-alt text-orange-600 mr-2"></i> Git & GitHub</span>
+            <span class="text-indigo-400">85%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-500 h-full rounded-full" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS ================= -->
+    <section id="projects">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-wider text-indigo-400 font-semibold">Featured Projects</span>
+        <h2 class="text-3xl font-bold text-white mt-1">Some of My Recent Work</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div
+          class="bg-cardBg border border-slate-800/80 rounded-xl overflow-hidden group hover:border-indigo-500/50 transition">
+          <div class="h-44 bg-slate-800 overflow-hidden relative">
+            <img  width="325px " src="./images-removebg-preview (2).png" alt="">
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-indigo-400 font-semibold">01 / Full Stack</span>
+            <h3 class="text-lg font-bold text-white mt-1">Netflix Clone</h3>
+            <p class="text-slate-400 text-xs mt-2 mb-4 leading-relaxed">Netflix is a global subscription-based entertainment service that offers on-demand streaming of TV series, films, documentaries, mobile games, and live programming</p>
+            <a href="https://omandrai.github.io/Netflix-clone/" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300">View Project <i
+                class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="bg-cardBg border border-slate-800/80 rounded-xl overflow-hidden group hover:border-indigo-500/50 transition">
+          <div class="h-44 bg-slate-800 overflow-hidden relative">
+            <img width="350px" src="./images.jpg" alt="">
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-indigo-400 font-semibold">02 / Project</span>
+            <h3 class="text-lg font-bold text-white mt-1">Simple Calculator</h3>
+            <p class="text-slate-400 text-xs mt-2 mb-4 leading-relaxed">A calculator is typically a portable electronic device used to perform calculations, ranging from basic arithmetic to complex mathematics.</p>
+            <a href="https://omandrai.github.io/calculator-second/" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300">View Project <i
+                class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="bg-cardBg border border-slate-800/80 rounded-xl overflow-hidden group hover:border-indigo-500/50 transition">
+          <div class="h-44 bg-slate-800 overflow-hidden relative">
+            <img width="340px" src="./ticket.jpg" alt="">
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-indigo-400 font-semibold">03 / js Project </span>
+            <h3 class="text-lg font-bold text-white mt-1">Ticket Booking</h3>
+            <p class="text-slate-400 text-xs mt-2 mb-4 leading-relaxed">You can book movie tickets online in Indore using platforms</p>
+            <a href="https://omandrai.github.io/tickets-booking/" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300">View Project <i
+                class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER / CONTACT ================= -->
+    <footer id="contact" class="bg-cardBg border border-slate-800/80 rounded-2xl p-8 md:p-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-indigo-400 font-semibold">Let's Work Together</span>
+          <h2 class="text-2xl font-bold text-white mt-2 mb-4">Have a project in mind?</h2>
+          <a href="mailto:your-omandrai@gmail.com"
+            class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-xs px-5 py-3 rounded-lg transition shadow-md shadow-indigo-600/30">
+            Get In Touch <i class="fa-regular fa-envelope ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Review / Quote Box -->
+        <div
+          class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-xs text-slate-300 flex flex-col justify-between">
+          <p class="italic text-slate-400 leading-relaxed">
+            "Omprakash is an exceptional developer who delivers high-quality work on time. Highly recommended!"
+          </p>
+          <div class="mt-4 font-semibold text-white"> <span class="text-slate-500 font-normal block">
+              </span></div>
+        </div>
+
+
+        <!-- Social Links -->
+        <div class="md:text-right flex flex-col justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Follow Me</p>
+            <div class="flex md:justify-end gap-3 text-lg text-slate-400">
+              <a href="https://github.com/dashboard" class="hover:text-white"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/omprakash-mandrai/" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+              
+            </div>
+          </div>
+          <p>📞Contact - 9516860538</p>
+          <p class="text-xs text-slate-500 mt-4">© 2026 CodeCraft. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</body>
+
+</html>
